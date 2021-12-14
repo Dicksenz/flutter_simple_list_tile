@@ -1,5 +1,5 @@
 name: simple_list_tile
-description: A fully customisable simple list tile with gradients.
+description: A fully customisable Flutter simple list tile with gradients, leading , trailing and positioned widgets. This widget can be used as a menu tile, settings etc..
 version: 0.0.2
 homepage: https://github.com/Dicksenz/flutter_simple_list_tile
 
