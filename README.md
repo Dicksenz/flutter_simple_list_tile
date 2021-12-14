@@ -1,14 +1,118 @@
-# simple_list_tile
+# simple list tile
 
-A new Flutter package project.
+A fully customisable simple list tile with gradients.
 
-## Getting Started
+<div style="display:flex">
+<img width="355" alt="alert2" src="https://user-images.githubusercontent.com/44444254/145979456-6bb152cc-1906-420f-b2a8-b0ec1615b1a6.png" width="200">
+<div/>
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+<b>Usage : </b>
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            SimpleListTile(
+              title: Text(
+                'Title',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              subtitle: Text(
+                'Subtitle',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.white,
+              ),
+              leading: Icon(
+                Icons.phone_android,
+                color: Colors.blue,
+              ),
+              borderRadius: BorderRadius.circular(20),
+              tileColor: Colors.grey[300]!,
+              circleColor: Colors.grey[100]!,
+              circleDiameter: 200,
+              gradient: LinearGradient(
+                colors: [Colors.blue, Colors.green],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SimpleListTile(
+              title: Text(
+                'Title',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              subtitle: Text(
+                'Subtitle',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.white,
+              ),
+              leading: Icon(
+                Icons.phone_android,
+                color: Colors.blue,
+              ),
+              borderRadius: BorderRadius.circular(20),
+              tileColor: Colors.grey[300]!,
+              circleColor: Colors.grey[100]!,
+              circleDiameter: 200,
+              gradient: LinearGradient(
+                colors: [Colors.red, Colors.yellow],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SimpleListTile(
+              title: Text(
+                'Title',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              subtitle: Text(
+                'Subtitle',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios),
+              leading: Image.asset(
+                'assets/guided_faq.png',
+              ),
+              borderRadius: BorderRadius.circular(20),
+              tileColor: Colors.white,
+              circleColor: Colors.blue[800]!,
+              circleDiameter: 200,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
