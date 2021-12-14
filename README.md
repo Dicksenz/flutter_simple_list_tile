@@ -9,6 +9,9 @@ A fully customizable bottom navigation bar with line indicators and gradient.
 <b>Usage without gradient: </b>
 
             SimpleListTile(
+              onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(
@@ -43,6 +46,9 @@ A fully customizable bottom navigation bar with line indicators and gradient.
               height: 20,
             ),
             SimpleListTile(
+              onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(
@@ -71,6 +77,9 @@ A fully customizable bottom navigation bar with line indicators and gradient.
 <b>Usage with gradient : </b>
 
                 SimpleListTile(
+                onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(
