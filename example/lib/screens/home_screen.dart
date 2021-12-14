@@ -12,6 +12,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             SimpleListTile(
+              onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(
@@ -46,6 +49,9 @@ class HomeScreen extends StatelessWidget {
               height: 20,
             ),
             SimpleListTile(
+              onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(
@@ -80,6 +86,9 @@ class HomeScreen extends StatelessWidget {
               height: 20,
             ),
             SimpleListTile(
+              onTap: () {
+                print('test');
+              },
               title: Text(
                 'Title',
                 style: TextStyle(

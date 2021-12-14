@@ -1,6 +1,6 @@
 name: simple_list_tile
 description: A fully customisable simple list tile with gradients.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Dicksenz/flutter_simple_list_tile
 
 environment:

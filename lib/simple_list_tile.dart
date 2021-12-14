@@ -13,6 +13,7 @@ class SimpleListTile extends StatelessWidget {
   final BorderRadius borderRadius;
   final double circleDiameter;
   final Gradient? gradient;
+  final VoidCallback? onTap;
 
   SimpleListTile({
     required this.title,
@@ -25,10 +26,75 @@ class SimpleListTile extends StatelessWidget {
     required this.leading,
     this.circleDiameter = 80,
     this.gradient,
+    required this.onTap,
   });
   @override
   Widget build(BuildContext context) {
     final double _circleDiameter = circleDiameter > 100 ? 80 : circleDiameter;
+
+    return SafeArea(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          // color: Colors.blue,
+          padding: EdgeInsets.only(right: 0),
+          child: LayoutBuilder(builder: (context, constraints) {
+            return Stack(
+              clipBehavior: Clip.none,
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: _circleDiameter + 10,
+                  margin: EdgeInsets.only(left: 40),
+                  padding: padding,
+                  decoration: BoxDecoration(
+                    color: tileColor,
+                    borderRadius: borderRadius,
+                    gradient: gradient,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: _circleDiameter - 40),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              title,
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              subtitle ?? SizedBox.shrink(),
+                            ],
+                          ),
+                        ),
+                        trailing ?? SizedBox.shrink()
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: -constraints.maxWidth + _circleDiameter,
+                  right: 0,
+                  child: Container(
+                    height: _circleDiameter,
+                    width: _circleDiameter,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      color: circleColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: leading,
+                  ),
+                )
+              ],
+            );
+          }),
+        ),
+      ),
+    );
     return SafeArea(
       child: Container(
         // color: Colors.blue,
