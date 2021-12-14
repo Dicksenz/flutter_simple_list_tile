@@ -1,2 +1,3 @@
+- 0.0.3: example updated
 - 0.0.2: onTap added
 - 0.0.1: gradient added
