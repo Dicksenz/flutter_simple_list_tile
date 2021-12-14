@@ -1,9 +1,9 @@
-# simple_list_tile
+# flutter_simple_list_tile
 
 A fully customisable simple list tile with gradients.
 
 <div style="display:flex">
-<img width="355" alt="alert2" src="https://user-images.githubusercontent.com/44444254/145979456-6bb152cc-1906-420f-b2a8-b0ec1615b1a6.png" width="200">
+    <img width="355" alt="alert2" src="https://user-images.githubusercontent.com/44444254/145979456-6bb152cc-1906-420f-b2a8-b0ec1615b1a6.png" width="200">
 <div/>
 
 <b>Usage with gradient: </b>
