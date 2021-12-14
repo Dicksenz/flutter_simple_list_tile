@@ -1,4 +1,4 @@
-# simple list tile
+# simple_list_tile
 
 A fully customisable simple list tile with gradients.
 
